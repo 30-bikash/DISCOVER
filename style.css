@@ -1,0 +1,574 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), transparent),
+    url(images/landscape_of_polynesia_resort_sea_bora_bora_island_with_palm_trees_hd_nature-2560x1440.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 0.8%;
+  position: relative;
+}
+nav {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.logo {
+  width: 230px;
+  height: 100px;
+  position: absolute;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo img {
+  width: 50px;
+}
+.cart-icon {
+  width: 33px;
+  cursor: pointer;
+}
+
+nav ul {
+  flex: 1;
+  text-align: right;
+  padding-right: 25px;
+}
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 30px;
+}
+nav ul li a {
+  color: #fff;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  text-decoration: none;
+  position: relative;
+}
+nav ul li a::after {
+  content: "";
+  width: 0%;
+  height: 3px;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translate(-50%);
+  background: #fff;
+  transition: width 0.3s;
+}
+nav ul li a:hover::after {
+  width: 50%;
+}
+.sidebar {
+  width: 460px;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(225, 225, 225, 0.6);
+  position: absolute;
+}
+.text-box {
+  color: #fff;
+  position: absolute;
+  bottom: 35%;
+}
+.text-box p {
+  font-size: 80px;
+  font-weight: 600;
+}
+.text-box h1 {
+  font-size: 120px;
+  font-weight: 900;
+  line-height: 100px;
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+  background: url(images/back.png);
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-position: 0 0;
+  animation: back 20s linear infinite;
+}
+@keyframes back {
+  100% {
+    background-position: 2000px 0;
+  }
+}
+.text-box h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 70px;
+  font-size: 35px;
+  font-weight: 700;
+}
+.text-box.row {
+  margin: 70px auto 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.text-box a {
+  color: #fff;
+  text-decoration: none;
+  line-height: 40px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  padding: 1px 20px;
+  margin-right: 140px;
+  border: 2px solid #fff;
+}
+/*why BORA BORA*/
+.title-text {
+  text-align: center;
+  padding-bottom: 75%;
+  line-height: 1400%;
+}
+.title-text h1 {
+  font-size: 50px;
+  font-family: "Times New Roman", Times, serif;
+  color: tan;
+}
+.feature-box {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  top: -1200px;
+}
+.feature-box h1 {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 200;
+  font-size: 35px;
+  color: tan;
+  text-align: justify;
+  position: relative;
+  top: 45px;
+}
+.feature-desc {
+  align-items: flex-end;
+  margin-bottom: -23%;
+}
+.feature-text p {
+  font-family: "Times New Roman", Times, serif;
+  color: white;
+  font-size: 22px;
+  position: relative;
+  right: 20px;
+  top: 40px;
+  text-align: justify;
+}
+
+.back-video {
+  position: absolute;
+  left: -4%;
+  bottom: -700px;
+  width: 140%;
+  height: auto;
+  z-index: -100;
+}
+@media (min-aspect-ratio: 16/9) {
+  .back-video {
+    width: 110%;
+    height: auto;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  .back-video {
+    width: auto;
+    height: 100%;
+  }
+}
+/*SERVICES*/
+#Services {
+  width: 100%;
+  padding: 70px 0;
+  background: whitesmoke;
+  position: relative;
+  top: -380px;
+}
+.title-text h2 {
+  color: tan;
+  font-size: 65px;
+  font-family: "Times New Roman", Times, serif;
+}
+.service-box {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: auto;
+  position: relative;
+  top: -1060px;
+}
+.single-service {
+  flex-basis: 48%;
+  text-align: center;
+  border-radius: 7px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+.single-service img {
+  width: 100%;
+  border-radius: 7px;
+}
+.overlay {
+  width: 48%;
+  height: 45%;
+  position: absolute;
+  top: 0;
+  border-radius: 7px;
+  cursor: pointer;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), #009688);
+  opacity: 0;
+  transition: 1s;
+}
+.single-service:hover .overlay {
+  opacity: 1;
+}
+.overlay1 {
+  width: 48%;
+  height: 45%;
+  position: absolute;
+  top: 0;
+  border-radius: 7px;
+  cursor: pointer;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), #009688);
+  opacity: 0;
+  transition: 1s;
+}
+.single-service:hover .overlay1 {
+  opacity: 1;
+}
+.overlay2 {
+  width: 48%;
+  height: 47%;
+  position: absolute;
+  top: 375px;
+  border-radius: 7px;
+  cursor: pointer;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), #009688);
+  opacity: 0;
+  transition: 1s;
+}
+.single-service:hover .overlay2 {
+  opacity: 1;
+}
+.overlay3 {
+  width: 48%;
+  height: 49%;
+  position: absolute;
+  top: 378px;
+  border-radius: 7px;
+  cursor: pointer;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), #009688);
+  opacity: 0;
+  transition: 1s;
+}
+.single-service:hover .overlay3 {
+  opacity: 1;
+}
+.service-desc {
+  width: 40%;
+  position: absolute;
+  left: 0%;
+  bottom: 0%;
+  transform: translate(-50%);
+  opacity: 0;
+  transition: 0.5s;
+}
+.service-desc1 {
+  width: 40%;
+  position: absolute;
+  right: 0%;
+  bottom: 0%;
+  transform: translate(-50%);
+  opacity: 0;
+  transition: 0.5s;
+}
+.service-desc2 {
+  width: 40%;
+  position: absolute;
+  left: 0%;
+  bottom: 0%;
+  transform: translate(-50%);
+  opacity: 0;
+  transition: 0.5s;
+}
+.service-desc3 {
+  width: 40%;
+  position: absolute;
+  right: 0%;
+  bottom: 0%;
+  transform: translate(-50%);
+  opacity: 0;
+  transition: 0.5s;
+}
+hr {
+  background: #fff;
+  height: 2px;
+  margin: 15px auto;
+  border: 0;
+}
+.service-desc h3 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 25px;
+}
+.service-desc p {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 16px;
+}
+.single-service:hover .service-desc {
+  left: 25%;
+  bottom: 75%;
+  opacity: 2;
+}
+.service-desc1 h3 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 25px;
+}
+.service-desc1 p {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 16px;
+}
+.single-service:hover .service-desc1 {
+  right: -15%;
+  bottom: 75%;
+  opacity: 2;
+}
+.service-desc2 h3 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 25px;
+}
+.service-desc2 p {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 16px;
+}
+.single-service:hover .service-desc2 {
+  left: 25%;
+  bottom: 25%;
+  opacity: 2;
+}
+.service-desc3 h3 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 25px;
+}
+.service-desc3 p {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 16px;
+}
+.single-service:hover .service-desc3 {
+  right: -15%;
+  bottom: 25%;
+  opacity: 2;
+}
+/*REVIEW*/
+
+#Review {
+  width: 100%;
+  padding: 70px 0;
+  position: relative;
+  top: -1400px;
+}
+.title-text h3 {
+  font-size: 53px;
+  font-family: "Times New Roman", Times, serif, "Lucida Sans";
+  background: #fff;
+  color: tan;
+  font-weight: 550;
+}
+.review-row {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  position: relative;
+  top: -1000px;
+}
+.review-col {
+  flex-basis: 28%;
+  padding: 10px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  box-shadow: 0 10px 20px 3px #00968814;
+  cursor: pointer;
+  background: #fff;
+  transition: transform 0.5s;
+}
+.review-col p {
+  font-size: 17px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.user {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+.user img {
+  width: 50px;
+  margin-right: 20px;
+  border-radius: 3px;
+}
+.user-info .fab {
+  margin-left: 10px;
+  color: #27c0ff;
+  font-size: 20px;
+}
+.user-info h4 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.user-info small {
+  color: #009688;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.review-col:hover {
+  transform: translateY(-7px);
+}
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: -3600px;
+  background: linear-gradient(to right, #6bbbaf, #09012c);
+  color: #fff;
+  padding: 100px 0 30px;
+  border-top-left-radius: 125px;
+  font-size: 13px;
+  line-height: 20px;
+}
+.row {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.col {
+  flex-basis: 23%;
+  padding: 10px;
+}
+.col:nth-child(2),
+.col:nth-child(3) {
+  flex-basis: 15%;
+}
+
+.col p {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 14px;
+}
+.col h3 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  width: fit-content;
+  margin-bottom: 40px;
+  position: relative;
+}
+.email-id {
+  border-bottom: 1px solid #ccc;
+  margin: 20px 0;
+}
+ul li {
+  list-style: none;
+  margin-bottom: 12px;
+}
+ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 14px;
+}
+form {
+  padding-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 50px;
+}
+form .fas {
+  font-size: 18px;
+  margin-right: 10px;
+}
+form input {
+  width: 100%;
+  background: transparent;
+  color: #ccc;
+  border: 0;
+  outline: none;
+}
+form button {
+  background: transparent;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+form button .fas {
+  font-size: 16px;
+  color: #ccc;
+}
+.social-icons .fab {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  color: #000;
+  background: #fff;
+  margin-right: 15px;
+  cursor: pointer;
+}
+.underline {
+  width: 100%;
+  height: 5px;
+  background: #767676;
+  border-radius: 3px;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  overflow: hidden;
+}
+.underline span {
+  width: 15px;
+  height: 100%;
+  background: #fff;
+  border-radius: 3px;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  animation: moving 2s linear infinite;
+}
+@keyframes moving {
+  0% {
+    left: -20px;
+  }
+  100% {
+    left: 100%;
+  }
+}
